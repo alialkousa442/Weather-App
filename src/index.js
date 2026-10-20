@@ -1,2 +1,3 @@
 import './style.css'
-console.log('Environment is completely ready!');
+import { getWeatherData } from "./weatherApi";
+getWeatherData("latakia");
