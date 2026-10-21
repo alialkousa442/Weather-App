@@ -1,3 +1,5 @@
 import './style.css'
 import { getWeatherData } from "./weatherApi";
- getWeatherData("latakia");
+ const data=await getWeatherData("latakia");
+ console.log(data);
+ 

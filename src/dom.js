@@ -1,0 +1,1 @@
+import { getWeatherData } from "./weatherApi";
