@@ -11,6 +11,19 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
+  ignoreWarnings: [/Critical dependency:/],
+  resolve: {
+    fallback: {
+   "os": false,
+      "worker_threads": false,
+      "uglify-js": false,
+      "@swc/core": false,
+      "esbuild": false,
+      "@minify-html/node": false,
+      "@swc/html": false,
+      "cssnano": false,
+    },
+  },
 
   devtool: 'inline-source-map',
 
