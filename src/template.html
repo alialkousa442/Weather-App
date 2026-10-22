@@ -1,20 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-</head>
-<body>
-  <main class="app-container">
-    <h1>Weather App</h1>
-    
-    <form id="search-form">
-      <input type="text" id="city-input" placeholder="Enter city name..." required />
-      <button type="submit" id="search-btn">Search</button>
-    </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <main class="app-container">
+      <h1>Weather App</h1>
 
-    <div id="weather-display"></div>
-  </main>
-</body>
+      <form id="search-form">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Enter city name..."
+          required
+        />
+        <span id="error-message"></span>
+        <button type="button" id="search-btn">Search</button>
+      </form>
+
+      <div id="weather-display">
+        <h2 id="city-name"></h2>
+        <div class="temp">
+          <p id="temp-id"></p>
+        </div>
+        <p id="humidity-id"></p>
+        <p id="conditions"></p>
+      </div>
+    </main>
+  </body>
 </html>

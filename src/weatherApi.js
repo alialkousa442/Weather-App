@@ -10,7 +10,8 @@ export async function getWeatherData(city) {
     const clearData=extractWeatherData(weatherData);
     return clearData;
   } catch (error) {
-    console.log('يوجد خطأ', error);
+    console.error('API Error:', error);
+    throw error;
   }
 }
  function extractWeatherData(opject) {

@@ -1,5 +1,5 @@
 import './style.css'
+import './dom.js'
 import { getWeatherData } from "./weatherApi";
- const data=await getWeatherData("latakia");
- console.log(data);
+
  
