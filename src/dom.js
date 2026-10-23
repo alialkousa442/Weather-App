@@ -23,12 +23,29 @@ function showError(message) {
 
 export function renderWeather(data) {
   lastWeatherData = data;
+  const weatherIcon = document.getElementById('weather-icon');
   cityName.textContent = data.city;
   humidity.textContent = `Humidity: ${data.humidity}%`;
   conditions.textContent = data.conditions;
   displayTemperature();
   unitToggleBtn.style.display = 'inline-block';
   weatherDisplay.style.display = 'block';
+  const iconMap = {
+    "Clear": "01d",
+    "Clouds": "02d",
+    "Partially cloudy":"02d",
+    "Overcast": "04d", 
+    "Rain": "10d",
+    "Drizzle": "09d",
+    "Thunderstorm": "11d",
+    "Snow": "13d",
+    "Mist": "50d",
+    "Fog": "50d"
+  };
+  const iconCode = iconMap[data.conditions] || "01d";
+  weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+  weatherIcon.style.display = 'inline-block';
+
 }
 function displayTemperature() {
   if (!lastWeatherData) return;

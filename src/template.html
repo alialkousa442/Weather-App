@@ -21,13 +21,27 @@
       </form>
 
       <div id="weather-display">
-        <h2 id="city-name"></h2>
+        <div class="city">
+          <h2 id="city-name"></h2>
+          <img
+            id="weather-icon"
+            src=""
+            alt="Weather Icon"
+            class="weather-icon"
+            style="display: none"
+          />
+        </div>
+
         <div class="temp">
           <p id="temp-id"></p>
-          <button type="button" id="unit-toggle-btn" style="display: none;">°C / °F</button>
+          <button type="button" id="unit-toggle-btn" style="display: none">
+            °C / °F
+          </button>
         </div>
-        <p id="humidity-id"></p>
-        <p id="conditions"></p>
+        <div id="weather-details">
+          <p id="humidity-id"></p>
+          <p id="conditions"></p>
+        </div>
       </div>
     </main>
   </body>

@@ -9,33 +9,21 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true
+    clean: true,
   },
   ignoreWarnings: [/Critical dependency:/],
-  resolve: {
-    fallback: {
-   "os": false,
-      "worker_threads": false,
-      "uglify-js": false,
-      "@swc/core": false,
-      "esbuild": false,
-      "@minify-html/node": false,
-      "@swc/html": false,
-      "cssnano": false,
-    },
-  },
 
   devtool: 'inline-source-map',
 
   devServer: {
     static: './dist',
-    watchFiles: ['./src/template.html'], 
+    watchFiles: ['./src/**/*.html', './src/**/*.css'],
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/template.html', 
-      title: 'My Webpack Project',    
+      template: './src/template.html',
+      title: 'My Webpack Project',
     }),
   ],
 
