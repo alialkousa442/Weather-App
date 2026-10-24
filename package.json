@@ -24,6 +24,7 @@
   "homepage": "https://github.com/alialkousa442/Weather-App#readme",
   "devDependencies": {
     "css-loader": "^7.1.5",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.8",
     "style-loader": "^4.0.0",
     "webpack": "^5.112.0",

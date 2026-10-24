@@ -29,6 +29,7 @@ body {
 }
 #search-form {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 24px;
 }
@@ -60,7 +61,17 @@ body {
   color: #ffffff;
 }
 #error-message{
-    color: rgb(206, 58, 58);
+color: #ff6b6b; 
+  background: rgba(255, 107, 107, 0.15); 
+  border: 1px solid rgba(255, 107, 107, 0.3); 
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 .temp {
   display: flex;
